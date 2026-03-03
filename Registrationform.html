@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width , initial-scale=1.0">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<form id="form">
+<p>Email:</p><br>
+<input type="text" id="e">
+<span id="emailerror"></span><br>
+<p>Password:</p><br>
+<input type="password" id="p">
+<span id="passerror"></span><br>
+<p>Conform Password:</p><br>
+<input type="password" id="c">
+<span id="cerror"></span><br><br>
+<button id="b" type="submit">Register:</button><br>
+</form>
+<script>
+document.getElementById("form").addEventListener("submit",(e)=>
+{
+e.preventDefault()
+document.getElementById("emailerror").innerText=""
+document.getElementById("passerror").innerText=""
+document.getElementById("cerror").innerText=""
+let email=document.getElementById("e").value.trim()
+let pass=document.getElementById("p").value
+let conf=document.getElementById("c").value
+let valid=true
+if(email.includes("@")==false||email.includes(".")==false)
+{
+document.getElementById("emailerror").innerText="Invalid Email"
+valid=false
+}
+if(pass!=conf)
+{
+document.getElementById("cerror").innerText="Passwords do not match"
+valid=false
+}
+if(valid==true)
+{
+alert("Registeration Successfull")
+document.getElementById("form").reset()
+}
+}
+)
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
