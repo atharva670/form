@@ -1,0 +1,39 @@
+body{
+    background: linear-gradient(135deg,yellow,red);
+    
+    background-size: 300% 300%;
+    display:flex;
+    
+                 
+    justify-content: center;    
+    align-items: center; 
+    height:100vh;
+    
+    animation: gradientMove 8s ease infinite;
+}
+p{
+    color:white;
+}
+input{
+    border-color:pink;
+    border:solid;
+
+}
+#b{
+    background-color: red;
+    color:yellow;
+}
+span{
+    color:white
+}
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
